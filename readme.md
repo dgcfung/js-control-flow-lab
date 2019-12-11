@@ -11,6 +11,8 @@ Using what you know about data types, variables, operators, conditional blocks, 
 
 > **Hint:** You may need `parseInt()` and `toString()`
 
+> **Hint About The Hint:** Google is your friend
+
 ## How to Get User Input
 
 ### `prompt()`
