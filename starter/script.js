@@ -13,24 +13,25 @@ suggestVacation = confirm("Do you want us to suggest a vacation location for you
 
 while(suggestVacation==true){
     hotTemp = confirm ("Do you prefer hot or cold weather \nPress OK for hot, or cancel for cold")
-    northTrue = confirm ("Do you prefer north or south weather \nPress OK for north, or cancel for south")
+    // hotTemp = prompt ("How warm do you want your destination to be? Please enter a number 1-10(1 = coldest, 10 =warmest")
+    northTrue = prompt ("Do you prefer north or south weather \nPress 1 for north, or 2 for south")
 
-    if (hotTemp && northTrue){
+    if (hotTemp && northTrue==1){
         var destination = prompt ("Please choose between Hong Kong and Miami or Orlando")
         if(destination == "Hong Kong"|| destination == "Miami"|| destination == "Orlando"){
             console.log(destination)
         }
-    } else if(hotTemp && !northTrue){
+    } else if(hotTemp && northTrue==2){
         var destination = prompt ("Please choose between Brazil and Indonesia or Phillipines")
         if(destination != "Brazil"|| destination != "Indonesia"|| destination != "Phillipines"){
             console.log(destination)
         }
-    } else if(!hotTemp && northTrue){
+    } else if(!hotTemp && northTrue==1){
         var destination = prompt ("Please choose between Moscow and North Pole or New York")
         if(destination != "Moscow"|| destination !="North Pole"|| destination != "New York"){
             console.log(destination)
         }
-    }else if(!hotTemp && !northTrue){
+    }else if(!hotTemp && northTrue==2){
         var destination = prompt ("Please choose between Antarctica and Sydney and Melbourne")
         if(destination != "Antarctica"|| destination != "Sydney"|| destination != "Melbourne"){
             console.log(destination)
@@ -38,7 +39,7 @@ while(suggestVacation==true){
             console.log("Enter valid replies.")
         }
     }
-    console.log("We suggest you take a vacation in " + destination)
+    alert("We suggest you take a vacation in " + destination)
     suggestVacation = confirm("Do you want us to suggest another vacation destination? \nPress OK for Yes, or cancel for No")
 }
 
